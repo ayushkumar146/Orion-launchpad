@@ -21,6 +21,8 @@ import {
     getAssociatedTokenAddressSync                 // Calculates associated token account address
 } from "@solana/spl-token";
 
+import './TokenLaunchpad.css';
+
 import { createInitializeInstruction, pack } from '@solana/spl-token-metadata';
 // -> For encoding metadata and initializing metadata for the mint.
 
@@ -155,7 +157,7 @@ export function TokenLaunchpad() {
             color: 'white',
             fontFamily: 'monospace'
         }}>
-            <h1>🚀 Solana Token Launchpad</h1>
+            <h1 className='floating-title'> Orion Token Launchpad</h1>
             {/* Input fields (not wired yet, static for now) */}
             <input className='inputText' type='text' placeholder='Name' style={{margin: '5px', padding: '8px'}}></input>
             <input className='inputText' type='text' placeholder='Symbol' style={{margin: '5px', padding: '8px'}}></input>

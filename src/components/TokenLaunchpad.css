@@ -1,0 +1,102 @@
+/* styles.css */
+/* Modern cosmic theme for Orion Token Launchpad */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1724; /* deep navy cosmic background */
+  color: white;
+  font-family: monospace;
+  height: 110vh;
+  overflow: hidden;
+}
+
+/* Floating Title Animation */
+.floating-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: float 3s ease-in-out infinite;
+  text-shadow: 0 0 10px #6366f1, 0 0 20px #6366f1;
+}
+
+/* Inputs */
+.inputText {
+  width: 260px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #1e293b;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.inputText::placeholder {
+  color: #94a3b8;
+}
+
+.inputText:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 10px #6366f1;
+}
+
+/* Button */
+.btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #6366f1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 15px #6366f1;
+  background-color: #4f46e5;
+}
+
+/* Floating animation (like gravity-free bounce) */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+@media (max-width: 768px) {
+  .floating-title {
+    font-size: 2rem;
+  }
+
+  .inputText {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-title {
+    font-size: 1.7rem;
+  }
+
+  .inputText {
+    width: 95%;
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    width: 80%;
+  }
+}
